@@ -43,7 +43,7 @@ class Subscriber_ {
   static Subscriber_ create(EventBus_ bus, Object listener, Method method) {
     return isDeclaredThreadSafe(method)
         ? new Subscriber_(bus, listener, method)
-        : new SynchronizedSubscriber(bus, listener, method);
+        : new SynchronizedSubscriber_(bus, listener, method);
   }
 
   /** The event bus this subscriber belongs to. */
@@ -73,7 +73,7 @@ class Subscriber_ {
    */
   final void dispatchEvent(final Object event) {
     executor.execute(new Runnable() {
-      @Override
+      //@Override
       public void run() {
         try {
           invokeSubscriberMethod(event);
@@ -133,7 +133,7 @@ class Subscriber_ {
    * {@link AllowConcurrentEvents} annotation.
    */
   private static boolean isDeclaredThreadSafe(Method method) {
-    return method.getAnnotation(AllowConcurrentEvents.class) != null;
+    return method.getAnnotation(AllowConcurrentEvents_.class) != null;
   }
 
   /**
@@ -141,9 +141,9 @@ class Subscriber_ {
    * the method at a time.
    */
   @VisibleForTesting
-  static final class SynchronizedSubscriber extends Subscriber_ {
+  static final class SynchronizedSubscriber_ extends Subscriber_ {
 
-    private SynchronizedSubscriber(EventBus_ bus, Object target, Method method) {
+    private SynchronizedSubscriber_(EventBus_ bus, Object target, Method method) {
       super(bus, target, method);
     }
 
