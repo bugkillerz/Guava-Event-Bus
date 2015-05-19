@@ -24,7 +24,6 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.*;
-import com.google.common.eventbus.Subscribe;
 import com.google.common.reflect.TypeToken;
 import com.google.common.util.concurrent.UncheckedExecutionException;
 
@@ -174,7 +173,7 @@ final class SubscriberRegistry_ {
     Map<MethodIdentifier, Method> identifiers = Maps.newHashMap();
     for (Class<?> supertype : supertypes) {
       for (Method method : supertype.getDeclaredMethods()) {
-        if (method.isAnnotationPresent(Subscribe.class) && !method.isSynthetic()) {
+        if (method.isAnnotationPresent(Subscribe_.class) && !method.isSynthetic()) {
           // TODO(cgdecker): Should check for a generic parameter type and error out
           Class<?>[] parameterTypes = method.getParameterTypes();
           checkArgument(parameterTypes.length == 1,

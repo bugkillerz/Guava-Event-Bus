@@ -8,7 +8,7 @@ import org.bugkillers.bus.eventbus.Subscribe_;
  */
 public class MessageSubsriber {
 
-    @Subscribe
+    //@Subscribe
     @Subscribe_
     public void subsribe(MessageEvent event){
         System.out.println("接收到订阅的消息："+event.getMessage());
