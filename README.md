@@ -1,6 +1,6 @@
 # Guava-Event-Bus
 Guava的EventBus源码学习
-```
+```xml 
 <dependency>
 	<groupId>com.google.guava</groupId>
 	<artifactId>guava</artifactId>
