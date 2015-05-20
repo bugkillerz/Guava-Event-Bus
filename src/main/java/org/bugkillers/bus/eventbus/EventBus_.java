@@ -98,24 +98,42 @@ import static com.google.common.base.Preconditions.checkNotNull;
 @Beta
 public class EventBus_ {
 
-    private static final Logger logger = Logger.getLogger(com.google.common.eventbus.EventBus.class.getName());
+    /**
+     * 日志logger
+     */
+    private static final Logger logger = Logger.getLogger(EventBus_.class.getName());
 
+    /**
+     * 每个消息总线的唯一身份
+     */
     private final String identifier;
+    /**
+     * jdk并发框架
+     */
     private final Executor executor;
+    /**
+     * 异常Handler
+     */
     private final SubscriberExceptionHandler_ exceptionHandler;
 
+    /**
+     * 订阅者
+     */
     private final SubscriberRegistry_ subscribers = new SubscriberRegistry_(this);
+    /**
+     * 分发器
+     */
     private final Dispatcher_ dispatcher;
 
     /**
-     * Creates a new EventBus named "default".
+     * 使用默认的名称创建一个EventBus "default".
      */
     public EventBus_() {
         this("default");
     }
 
     /**
-     * Creates a new EventBus with the given {@code identifier}.
+     * 创建一个EventBus使用 {@code identifier}.
      *
      * @param identifier a brief name for this bus, for logging purposes.  Should
      *                   be a valid Java identifier.
@@ -175,6 +193,7 @@ public class EventBus_ {
     }
 
     /**
+     * 注册订阅者
      * Registers all subscriber methods on {@code object} to receive events.
      *
      * @param object object whose subscriber methods should be registered.
@@ -184,6 +203,7 @@ public class EventBus_ {
     }
 
     /**
+     * 取消注册
      * Unregisters all subscriber methods on a registered {@code object}.
      *
      * @param object object whose subscriber methods should be unregistered.
@@ -223,6 +243,7 @@ public class EventBus_ {
 
     /**
      * Simple logging handler for subscriber exceptions.
+     * 异常日志记录处理Handler
      */
     static final class LoggingHandler_ implements SubscriberExceptionHandler_ {
         static final LoggingHandler_ INSTANCE = new LoggingHandler_();

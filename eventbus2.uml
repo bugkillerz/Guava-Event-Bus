@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.bugkillers.bus.eventbus</OriginalElement>
+  <nodes>
+    <node x="974.7672380952381" y="1201.0">org.bugkillers.bus.eventbus.Dispatcher_</node>
+    <node x="0.0" y="622.0">org.bugkillers.bus.eventbus.EventBus_.LoggingHandler_</node>
+    <node x="1144.9888571428573" y="644.0">org.bugkillers.bus.eventbus.Subscriber_.SynchronizedSubscriber_</node>
+    <node x="230.0" y="1464.0">org.bugkillers.bus.eventbus.Subscribe_</node>
+    <node x="957.7388571428572" y="1011.0">org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher.EventWithSubscriber</node>
+    <node x="1224.2388571428573" y="1090.0">org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher</node>
+    <node x="847.9888571428572" y="611.0">org.bugkillers.bus.eventbus.SubscriberExceptionContext_</node>
+    <node x="0.0" y="1464.0">org.bugkillers.bus.eventbus.AllowConcurrentEvents_</node>
+    <node x="1357.7388571428573" y="1011.0">org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher.Event</node>
+    <node x="783.5388571428573" y="123.0">org.bugkillers.bus.eventbus.SubscriberRegistry_</node>
+    <node x="862.0388571428573" y="0.0">org.bugkillers.bus.eventbus.SubscriberRegistry_.MethodIdentifier</node>
+    <node x="987.2672380952381" y="1368.0">org.bugkillers.bus.eventbus.Dispatcher_.ImmediateDispatcher</node>
+    <node x="10.0" y="200.0">org.bugkillers.bus.eventbus.SubscriberExceptionHandler_</node>
+    <node x="561.9888571428572" y="655.0">org.bugkillers.bus.eventbus.test</node>
+    <node x="871.2388571428572" y="1090.0">org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher</node>
+    <node x="658.9888571428572" y="378.0">org.bugkillers.bus.eventbus.EventBus_</node>
+    <node x="988.2672380952381" y="778.0">org.bugkillers.bus.eventbus.Subscriber_</node>
+    <node x="692.9888571428572" y="655.0">org.bugkillers.bus.eventbus.AsyncEventBus_</node>
+    <node x="572.5388571428573" y="177.5">org.bugkillers.bus.eventbus.DeadEvent_</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher.Event" target="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher">
+      <point x="22.0" y="14.5" />
+      <point x="1412.7388571428573" y="1065.0" />
+      <point x="1501.7388571428573" y="1065.0" />
+      <point x="111.0" y="-25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher.EventWithSubscriber" target="org.bugkillers.bus.eventbus.Subscriber_">
+      <point x="0.0" y="-14.5" />
+      <point x="1037.7388571428573" y="986.0" />
+      <point x="1103.767238095238" y="986.0" />
+      <point x="-115.5" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Subscriber_" target="org.bugkillers.bus.eventbus.Subscriber_.SynchronizedSubscriber_">
+      <point x="-38.5" y="-91.5" />
+      <point x="1180.767238095238" y="753.0" />
+      <point x="1192.8221904761904" y="753.0" />
+      <point x="-95.66666666666674" y="25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.EventBus_" target="org.bugkillers.bus.eventbus.DeadEvent_">
+      <point x="-55.60000000000002" y="-91.5" />
+      <point x="742.3888571428572" y="348.0" />
+      <point x="668.0388571428573" y="348.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_" target="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher">
+      <point x="-102.28571428571422" y="-58.5" />
+      <point x="1051.4815238095239" y="1171.0" />
+      <point x="926.7388571428572" y="1171.0" />
+      <point x="-111.0" y="25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.SubscriberRegistry_" target="org.bugkillers.bus.eventbus.Subscriber_">
+      <point x="120.0" y="102.5" />
+      <point x="1063.5388571428573" y="358.0" />
+      <point x="1442.4888571428573" y="358.0" />
+      <point x="1442.4888571428573" y="753.0" />
+      <point x="1411.767238095238" y="753.0" />
+      <point x="192.5" y="-91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.EventBus_" target="org.bugkillers.bus.eventbus.SubscriberRegistry_">
+      <point x="55.60000000000002" y="-91.5" />
+      <point x="853.5888571428573" y="358.0" />
+      <point x="903.5388571428573" y="358.0" />
+      <point x="-40.0" y="102.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.ImmediateDispatcher" target="org.bugkillers.bus.eventbus.Dispatcher_">
+      <point x="83.25" y="-25.5" />
+      <point x="1237.017238095238" y="1343.0" />
+      <point x="1243.267238095238" y="1343.0" />
+      <point x="89.5" y="58.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Subscriber_" target="org.bugkillers.bus.eventbus.EventBus_">
+      <point x="-115.5" y="-91.5" />
+      <point x="1103.767238095238" y="753.0" />
+      <point x="1134.4888571428573" y="753.0" />
+      <point x="1134.4888571428573" y="581.0" />
+      <point x="913.8221904761906" y="581.0" />
+      <point x="115.83333333333337" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher.Event" target="org.bugkillers.bus.eventbus.Subscriber_">
+      <point x="0.0" y="-14.5" />
+      <point x="1390.7388571428573" y="986.0" />
+      <point x="1334.767238095238" y="986.0" />
+      <point x="115.5" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Subscriber_.SynchronizedSubscriber_" target="org.bugkillers.bus.eventbus.Subscriber_">
+      <point x="0.0" y="25.5" />
+      <point x="1288.4888571428573" y="753.0" />
+      <point x="1257.767238095238" y="753.0" />
+      <point x="38.5" y="-91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher" target="org.bugkillers.bus.eventbus.Dispatcher_">
+      <point x="0.0" y="25.5" />
+      <point x="1037.7388571428573" y="1161.0" />
+      <point x="1102.624380952381" y="1161.0" />
+      <point x="-51.14285714285711" y="-58.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Subscriber_" target="org.bugkillers.bus.eventbus.SubscriberExceptionContext_">
+      <point x="-192.5" y="-91.5" />
+      <point x="1026.767238095238" y="753.0" />
+      <point x="985.9888571428572" y="753.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.test" target="org.bugkillers.bus.eventbus.test">
+      <point x="0.0" y="14.5" />
+      <point x="617.4888571428572" y="704.0" />
+      <point x="541.9888571428572" y="704.0" />
+      <point x="541.9888571428572" y="669.5" />
+      <point x="-55.5" y="-0.0" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.EventBus_" target="org.bugkillers.bus.eventbus.SubscriberExceptionHandler_">
+      <point x="-111.19999999999993" y="-91.5" />
+      <point x="686.7888571428573" y="358.0" />
+      <point x="349.75" y="358.0" />
+      <point x="113.25" y="25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.SubscriberRegistry_.MethodIdentifier" target="org.bugkillers.bus.eventbus.SubscriberRegistry_">
+      <point x="40.75" y="36.5" />
+      <point x="984.2888571428573" y="98.0" />
+      <point x="1023.5388571428573" y="98.0" />
+      <point x="80.0" y="-102.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.SubscriberRegistry_" target="org.bugkillers.bus.eventbus.SubscriberRegistry_.MethodIdentifier">
+      <point x="-80.0" y="-102.5" />
+      <point x="863.5388571428573" y="98.0" />
+      <point x="902.7888571428573" y="98.0" />
+      <point x="-40.75" y="36.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher.EventWithSubscriber" target="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher">
+      <point x="53.33333333333326" y="14.5" />
+      <point x="1091.0721904761904" y="1065.0" />
+      <point x="1148.7388571428573" y="1065.0" />
+      <point x="111.0" y="-25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.test" target="org.bugkillers.bus.eventbus.EventBus_">
+      <point x="0.0" y="-14.5" />
+      <point x="617.4888571428572" y="591.0" />
+      <point x="728.4888571428572" y="591.0" />
+      <point x="-69.5" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher" target="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher.Event">
+      <point x="-111.0" y="-25.5" />
+      <point x="1279.7388571428573" y="1065.0" />
+      <point x="1368.7388571428573" y="1065.0" />
+      <point x="-22.0" y="14.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.AsyncEventBus_" target="org.bugkillers.bus.eventbus.EventBus_">
+      <point x="0.0" y="-14.5" />
+      <point x="759.4888571428572" y="591.0" />
+      <point x="774.8221904761906" y="591.0" />
+      <point x="-23.16666666666663" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.SubscriberExceptionContext_" target="org.bugkillers.bus.eventbus.EventBus_">
+      <point x="1.1368683772161603E-13" y="-58.5" />
+      <point x="985.9888571428573" y="591.0" />
+      <point x="867.4888571428572" y="591.0" />
+      <point x="69.5" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.SubscriberRegistry_" target="org.bugkillers.bus.eventbus.EventBus_">
+      <point x="40.0" y="102.5" />
+      <point x="983.5388571428573" y="358.0" />
+      <point x="909.1888571428573" y="358.0" />
+      <point x="111.20000000000005" y="-91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.EventBus_.LoggingHandler_" target="org.bugkillers.bus.eventbus.EventBus_">
+      <point x="123.25" y="-47.5" />
+      <point x="369.75" y="581.0" />
+      <point x="682.1555238095239" y="581.0" />
+      <point x="-115.83333333333337" y="91.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher" target="org.bugkillers.bus.eventbus.Dispatcher_.LegacyAsyncDispatcher.EventWithSubscriber">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.EventBus_" target="org.bugkillers.bus.eventbus.Dispatcher_">
+      <point x="23.16666666666663" y="91.5" />
+      <point x="821.1555238095239" y="591.0" />
+      <point x="836.4888571428572" y="591.0" />
+      <point x="836.4888571428572" y="1181.0" />
+      <point x="1000.3386666666667" y="1181.0" />
+      <point x="-153.42857142857144" y="-58.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.EventBus_.LoggingHandler_" target="org.bugkillers.bus.eventbus.SubscriberExceptionHandler_">
+      <point x="-123.25" y="-47.5" />
+      <point x="-113.25" y="25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_" target="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher">
+      <point x="51.14285714285711" y="-58.5" />
+      <point x="1204.9100952380952" y="1161.0" />
+      <point x="1279.7388571428573" y="1161.0" />
+      <point x="-111.0" y="25.5" />
+    </edge>
+    <edge source="org.bugkillers.bus.eventbus.Dispatcher_.PerThreadQueuedDispatcher" target="org.bugkillers.bus.eventbus.Dispatcher_">
+      <point x="111.0" y="25.5" />
+      <point x="1501.7388571428573" y="1181.0" />
+      <point x="1307.1958095238097" y="1181.0" />
+      <point x="153.42857142857156" y="-58.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7323198942498348" x="779.0" y="746.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
