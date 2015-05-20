@@ -39,9 +39,29 @@ EventBus支持一个订阅者来订阅多个类型的事件，Event的子类也�
 
 ###3. 总体设计
 ####3.1 类图设计
+> ps:忽略类名后的下划线
+#####3.1.1 EventBus简要类图
+![pre-eventbus img](res/pre-eventBus.png) 
+#####3.1.2 EventBus详细类图
 ![eventbus img](res/EventBusDiagram.png)  
 ####3.2 流程设计
+#####3.2.1 创建流程
+#####3.2.2 regist流程
+#####3.2.3 unregist流程
+#####3.2.4 post流程
 ###4. 源码详细分析
+**线程安全注解：** `AllowConcurrentEvents`
+**方法订阅注解：** `Subscribe`
+**消息总线：** `EventBus`
+**异步消息总线：** `AsyncEventBus`
+**分发器：** `Dispatcher`
+**DeadEvent：** `DeadEvent`
+**订阅者：** `Subscriber`
+**订阅者注册表：** `SubscriberRegistry`
+**异常上下文：** `SubscriberExceptionContext`
+**异常Handler：** `SubscriberExceptionHandler`
+
+
 ###5. 总结
 ####5.1 并发编程，JDK并发包Executor
 ####5.2 guava断言checkNotNull
