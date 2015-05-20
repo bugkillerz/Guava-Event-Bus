@@ -47,7 +47,9 @@ EventBus支持一个订阅者来订阅多个类型的事件，Event的子类也�
 ![eventbus img](res/EventBusDiagram.png)  
 ####3.2 流程设计
 #####3.2.1 创建流程
+
 #####3.2.2 register流程
+![register-progress img](res/register-progress.png)  
 #####3.2.3 unregister流程
 #####3.2.4 post流程
 ###4. 源码详细分析
