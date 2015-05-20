@@ -47,20 +47,29 @@ EventBus支持一个订阅者来订阅多个类型的事件，Event的子类也�
 ![eventbus img](res/EventBusDiagram.png)  
 ####3.2 流程设计
 #####3.2.1 创建流程
-#####3.2.2 regist流程
-#####3.2.3 unregist流程
+#####3.2.2 register流程
+#####3.2.3 unregister流程
 #####3.2.4 post流程
 ###4. 源码详细分析
-**线程安全注解：** `AllowConcurrentEvents`
+**线程安全注解：** `AllowConcurrentEvents`      
+
 **方法订阅注解：** `Subscribe`
-**消息总线：** `EventBus`
+
+**标准消息总线：** `EventBus`
+
 **异步消息总线：** `AsyncEventBus`
-**分发器：** `Dispatcher`
-**DeadEvent：** `DeadEvent`
-**订阅者：** `Subscriber`
+
 **订阅者注册表：** `SubscriberRegistry`
+
 **异常上下文：** `SubscriberExceptionContext`
+
+**订阅者：** `Subscriber`
+
+**分发器：** `Dispatcher`
+
 **异常Handler：** `SubscriberExceptionHandler`
+
+**DeadEvent：** `DeadEvent`
 
 
 ###5. 总结
