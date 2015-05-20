@@ -17,7 +17,6 @@
 package org.bugkillers.bus.eventbus;
 
 import com.google.common.annotations.Beta;
-import com.google.common.eventbus.Subscribe;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -25,12 +24,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Marks an event subscriber method as being thread-safe.  This annotation
- * indicates that EventBus may invoke the event subscriber simultaneously from
- * multiple threads.
- *
- * <p>This does not mark the method, and so should be used in combination with
- * {@link Subscribe}.
+ * 表明这个事件的订阅者使用线程安全的，这个注解意味着消息总线可用从多个线程同时调用
+ * <p>这没有标记的方法，所以应该结合使用
+ * {@link Subscribe_}.
  *
  * @author Cliff Biffle
  * @since 10.0

@@ -25,16 +25,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Marks a method as an event subscriber.
- *
- * <p>The type of event will be indicated by the method's first (and only)
- * parameter.  If this annotation is applied to methods with zero parameters,
- * or more than one parameter, the object containing the method will not be able
- * to register for event delivery from the {@link EventBus}.
- *
- * <p>Unless also annotated with @{@link AllowConcurrentEvents_}, event subscriber
- * methods will be invoked serially by each event bus that they are registered
- * with.
+ * 订阅注解
+ * 标示一个方法作为一个事件的订阅者
+ * <p/>
+ * <p>事件类型将由方法的第一个（也是唯一的）参数表明。如果这个注解标注的方法没有参数或者超过一个参数，
+ * 则包含的方法则不能注册成为事件的订阅者对于 {@link EventBus_}。
+ * <p/>
+ * <p>除非是使用注解另外表明 @{@link AllowConcurrentEvents_}, 事件订阅方法将连续通过他们注册的每个事件总线调用.
  *
  * @author Cliff Biffle
  * @since 10.0
