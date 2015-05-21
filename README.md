@@ -84,12 +84,4 @@ EventBus支持一个订阅者来订阅多个类型的事件，Event的子类也�
 ####5.5 缓存配置ImmutableList不可变list
 ####5.6 获取类型TypeToken
 ####5.7 ThreadLocal
-
-
-```xml 
-<dependency>
-	<groupId>com.google.guava</groupId>
-	<artifactId>guava</artifactId>
-	<version>18.0</version>
-</dependency>
-```	
+	
